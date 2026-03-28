@@ -1,22 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vanshika Gupta — AI/ML Researcher</title>
+  <title>Vanshika Gupta — AI/ML Research Undergrad</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;0,800;0,900;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --ink: #0f0e0c;
-      --paper: #f5f0e8;
-      --accent: #c1440e;
-      --accent2: #2a5c8f;
-      --muted: #7a7265;
-      --rule: #d4ccbe;
-      --card-bg: #ece7dc;
+      --ink: #e2e8f0;
+      --paper: #09090b;
+      --accent: #10b981;
+      --accent2: #3b82f6;
+      --muted: #a1a1aa;
+      --rule: #27272a;
+      --card-bg: #18181b;
     }
 
     html { scroll-behavior: smooth; }
@@ -24,20 +24,9 @@
     body {
       background: var(--paper);
       color: var(--ink);
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-weight: 300;
       overflow-x: hidden;
-    }
-
-    /* ── NOISE OVERLAY ── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.4;
     }
 
     /* ── NAV ── */
@@ -49,13 +38,13 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.25rem 3rem;
-      background: rgba(245, 240, 232, 0.85);
+      background: rgba(9, 9, 11, 0.85);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--rule);
     }
 
     .nav-logo {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-weight: 900;
       font-size: 1.1rem;
       letter-spacing: -0.02em;
@@ -70,7 +59,7 @@
     }
 
     .nav-links a {
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.72rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -83,35 +72,35 @@
 
     /* ── HERO ── */
     .hero {
-      min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      padding-top: 5rem;
+      padding-top: 3rem;
     }
 
     .hero-left {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 5rem 3rem 5rem 3rem;
+      padding: 2rem 3rem 1rem 3rem;
       border-right: 1px solid var(--rule);
     }
 
     .hero-tag {
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.7rem;
       letter-spacing: 0.18em;
       color: var(--accent);
       text-transform: uppercase;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0;
     }
 
     .hero-name {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: clamp(3.5rem, 6vw, 6rem);
       font-weight: 900;
       line-height: 1;
       letter-spacing: -0.03em;
+      margin-top: 0;
       margin-bottom: 0.5rem;
     }
 
@@ -121,7 +110,7 @@
     }
 
     .hero-subtitle {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: clamp(1rem, 2vw, 1.5rem);
       font-weight: 400;
       font-style: italic;
@@ -137,6 +126,7 @@
       max-width: 42ch;
       margin-bottom: 3rem;
       opacity: 0.8;
+      margin-top: -0.5rem;
     }
 
     .hero-links {
@@ -150,7 +140,7 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0.75rem 1.75rem;
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.72rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -173,19 +163,18 @@
       color: white;
     }
     .btn-primary:hover {
-      background: #a83809;
-      border-color: #a83809;
-      color: white;
+      background: #059669; /* darker emerald */
+      border-color: #059669;
+      color: var(--paper);
     }
 
     /* ── HERO RIGHT ── */
     .hero-right {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      padding: 3rem;
+      justify-content: center;
+      padding: 5rem 3rem 1rem 3rem;
       position: relative;
-      overflow: hidden;
     }
 
     .hero-decoration {
@@ -211,7 +200,7 @@
 
     .hero-decoration::after {
       content: 'VG';
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 5rem;
       font-weight: 900;
       color: var(--rule);
@@ -232,7 +221,7 @@
     }
 
     .stat-num {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 2.5rem;
       font-weight: 900;
       line-height: 1;
@@ -241,7 +230,7 @@
     }
 
     .stat-label {
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.65rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -262,14 +251,14 @@
     }
 
     .section-num {
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.7rem;
       color: var(--accent);
       letter-spacing: 0.1em;
     }
 
     .section-title {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: clamp(2rem, 4vw, 3.5rem);
       font-weight: 900;
       letter-spacing: -0.03em;
@@ -294,7 +283,7 @@
     .exp-meta { }
 
     .exp-date {
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.68rem;
       letter-spacing: 0.1em;
       color: var(--muted);
@@ -309,7 +298,7 @@
     }
 
     .exp-type {
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.62rem;
       letter-spacing: 0.1em;
       color: var(--muted);
@@ -317,7 +306,7 @@
     }
 
     .exp-role {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 0.35rem;
@@ -357,14 +346,24 @@
 
     /* ── PROJECTS ── */
     .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
       gap: 1px;
       background: var(--rule);
       border: 1px solid var(--rule);
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE/Edge */
+      user-select: none; /* Prevent text highlight on mouse drag */
+    }
+
+    .project-grid::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
     }
 
     .project-card {
+      flex: 0 0 400px; /* Fixed width for carousel */
+      scroll-snap-align: start;
       background: var(--paper);
       padding: 2rem;
       transition: background 0.2s;
@@ -388,7 +387,7 @@
     .project-card:hover { background: var(--card-bg); }
 
     .project-num {
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.65rem;
       color: var(--muted);
       letter-spacing: 0.12em;
@@ -396,7 +395,7 @@
     }
 
     .project-name {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1.2rem;
       font-weight: 700;
       margin-bottom: 0.75rem;
@@ -417,7 +416,7 @@
     }
 
     .tag {
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.6rem;
       letter-spacing: 0.08em;
       padding: 0.25rem 0.6rem;
@@ -435,7 +434,7 @@
     }
 
     .skill-group-title {
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.65rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -477,7 +476,7 @@
     .edu-item:first-child { border-top: 1px solid var(--rule); }
 
     .edu-year {
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.68rem;
       color: var(--muted);
       letter-spacing: 0.1em;
@@ -485,7 +484,7 @@
     }
 
     .edu-inst {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 0.25rem;
@@ -499,32 +498,32 @@
     }
 
     .edu-detail {
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.68rem;
       color: var(--accent);
       letter-spacing: 0.06em;
     }
 
     /* ── ACHIEVEMENTS ── */
-    #achievements { background: var(--ink); color: var(--paper); }
-    #achievements .section-title { color: var(--paper); }
+    #achievements { background: var(--card-bg); color: var(--ink); }
+    #achievements .section-title { color: var(--ink); }
     #achievements .section-num { color: var(--accent); }
 
     .achv-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05); /* very subtle grid lines */
+      border: 1px solid rgba(255,255,255,0.05);
     }
 
     .achv-card {
-      background: var(--ink);
+      background: var(--card-bg);
       padding: 2rem;
       transition: background 0.2s;
     }
 
-    .achv-card:hover { background: #1c1b18; }
+    .achv-card:hover { background: #27272a; }
 
     .achv-icon {
       font-size: 1.5rem;
@@ -532,17 +531,17 @@
     }
 
     .achv-title {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
-      color: var(--paper);
+      color: #ffffff; /* pure white */
     }
 
     .achv-desc {
       font-size: 0.8rem;
       line-height: 1.6;
-      color: rgba(245,240,232,0.55);
+      color: rgba(226,232,240,0.55);
     }
 
     /* ── CONTACT / FOOTER ── */
@@ -557,7 +556,7 @@
     }
 
     .footer-left .big-text {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Inter', sans-serif;
       font-size: clamp(2.5rem, 5vw, 4.5rem);
       font-weight: 900;
       letter-spacing: -0.03em;
@@ -579,7 +578,7 @@
     }
 
     .contact-label {
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.62rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -601,7 +600,7 @@
     }
 
     .footer-credit {
-      font-family: 'DM Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.65rem;
       letter-spacing: 0.1em;
       color: var(--muted);
@@ -614,7 +613,7 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    .hero-left > * {
+    .hero-left > *, .hero-right > * {
       animation: fadeUp 0.6s ease both;
     }
     .hero-tag    { animation-delay: 0.1s; }
@@ -628,9 +627,9 @@
       nav { padding: 1rem 1.5rem; }
       .nav-links { display: none; }
 
-      .hero { grid-template-columns: 1fr; }
-      .hero-right { display: none; }
-      .hero-left { padding: 2rem 1.5rem; }
+      .hero { grid-template-columns: 1fr; padding-top: 5rem; }
+      .hero-left { padding: 2rem 1.5rem 1rem 1.5rem; border-right: none; }
+      .hero-right { display: flex; padding: 1rem 1.5rem 2rem 1.5rem; }
 
       section { padding: 3.5rem 1.5rem; }
 
@@ -641,6 +640,10 @@
 
       footer { grid-template-columns: 1fr; gap: 2rem; }
       .footer-right { text-align: left; }
+
+      .project-card {
+        flex: 0 0 85vw;
+      }
     }
   </style>
 </head>
@@ -661,21 +664,23 @@
 <!-- HERO -->
 <section class="hero" style="border-top:none; padding:0;">
   <div class="hero-left">
-    <p class="hero-tag">AI/ML Researcher &amp; Engineer</p>
-    <h1 class="hero-name">Van<em>shika</em><br>Gupta</h1>
-    <p class="hero-subtitle">AI/ML · Computer Vision · NLP</p>
-    <p class="hero-desc">
-      B.S. Engineering Sciences student at IISER Bhopal, researching Continual Test-Time Adaptation and building robust AI systems at the intersection of deep learning, computer vision, and econometric modeling.
-    </p>
-    <div class="hero-links">
-      <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#7006111e0318191b11174243301919031502125e11135e191e">Get in Touch</a>
-      <a class="btn" href="https://github.com/Vnshiee" target="_blank">GitHub ↗</a>
-      <a class="btn" href="https://linkedin.com/in/vanshika-gupta" target="_blank">LinkedIn ↗</a>
+    
+    <div class="hero-photo" style="margin-left: 1rem; margin-bottom: -4rem; width: clamp(160px, 18vw, 220px); aspect-ratio: 1/1; border-radius: 50%; overflow: hidden; border: 1px solid var(--rule); position: relative; z-index: 1; animation: fadeUp 0.6s ease both; animation-delay: 0.1s;">
+      <img src="Profile_photo.jpeg" alt="Vanshika Gupta" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" />
     </div>
+    <h1 class="hero-name" style="position: relative; z-index: 2; margin-bottom: 0.5rem; pointer-events: none; text-shadow: 2px 2px 15px var(--paper), -2px -2px 15px var(--paper);">Van<em>shika</em><br>Gupta</h1>
   </div>
 
   <div class="hero-right">
-
+    <p class="hero-subtitle">Robust AI Systems · Computer Vision · Predictive Modeling</p>
+    <p class="hero-desc">
+      I am a Data Science & Engineering student at IISER Bhopal and a Programming Diploma candidate at IIT Madras. Driven by a broad curiosity in AI and computational modeling, I aim to build a rigorous engineering foundation to solve complex problems. My recent projects span test-time adaptation, computer vision, and time-series forecasting, but I am actively exploring new fields and technologies.
+    </p>
+    <div class="hero-links">
+      <a class="btn btn-primary" href="mailto:gupta.van20@gmail.com">Get in Touch</a>
+      <a class="btn" href="https://github.com/Vnshiee" target="_blank">GitHub ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/vanshika-gupta-here/" target="_blank">LinkedIn ↗</a>
+    </div>
   </div>
 </section>
 
@@ -743,14 +748,35 @@
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="section-header">
-    <span class="section-num">02</span>
-    <h2 class="section-title">Projects</h2>
+  <div class="section-header" style="justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <div style="display: flex; align-items: baseline; gap: 1.5rem;">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Projects</h2>
+    </div>
+    <div class="carousel-nav" style="display: flex; gap: 1rem;">
+      <button class="carousel-btn" id="scroll-prev" style="width: 45px; height: 45px; border-radius: 50%; border: 1px solid var(--ink); background: transparent; color: var(--ink); font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">←</button>
+      <button class="carousel-btn" id="scroll-next" style="width: 45px; height: 45px; border-radius: 50%; border: 1px solid var(--ink); background: transparent; color: var(--ink); font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">→</button>
+    </div>
   </div>
   <div class="project-grid">
 
-    <div class="project-card">
+    <div class="project-card" style="cursor:pointer;" onclick="window.open('https://github.com/Vnshiee/Neural-Network-Robustness-Analysis','_blank')">
       <div class="project-num">P — 01</div>
+      <div class="project-name">Neural Network Robustness Analysis</div>
+      <div class="project-desc">Evaluation of CNN and ViT architectures (ResNet, ConvNeXT) under OOD shifts and image corruptions on datasets like CIFAR-10 and ImageNet-100. Explored validation optimization, t-SNE decision boundary mapping, and internal feature perturbations to analyze layer sensitivity.</div>
+      <div class="tag-row">
+        <span class="tag">Python</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">ResNet/ViT</span>
+        <span class="tag">OOD Generalization</span>
+      </div>
+      <div style="margin-top:1.25rem;">
+        <a href="https://github.com/Vnshiee/Neural-Network-Robustness-Analysis" target="_blank" style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--accent);letter-spacing:0.08em;text-decoration:none;" onclick="event.stopPropagation()">View on GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="project-card" style="cursor:pointer;" onclick="window.open('YOUR_GITHUB_LINK_HERE','_blank')">
+      <div class="project-num">P — 02</div>
       <div class="project-name">OccFecNet: Robust Facial Expression Recognition</div>
       <div class="project-desc">Progressive 4-phase teacher-student distillation curriculum. Augmented a frozen FaceNet backbone with a custom residual spatial attention module achieving &gt;0.92 mean cosine similarity and &gt;5% accuracy improvement on the heavily occluded FED-RO dataset.</div>
       <div class="tag-row">
@@ -760,12 +786,12 @@
         <span class="tag">Knowledge Distillation</span>
       </div>
       <div style="margin-top:1.25rem;">
-        <span style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.08em;">Private / In Progress</span>
+        <a href="https://github.com/Vnshiee/EmOcc" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);letter-spacing:0.08em;text-decoration:none;" onclick="event.stopPropagation()">View on GitHub ↗</a>
       </div>
     </div>
 
     <div class="project-card" style="cursor:pointer;" onclick="window.open('https://github.com/Vnshiee/Video-to-3D-Reconstruction-SFM-','_blank')">
-      <div class="project-num">P — 02</div>
+      <div class="project-num">P — 03</div>
       <div class="project-name">Video-to-3D Reconstruction (SFM)</div>
       <div class="project-desc">Structure from Motion pipeline generating 3D point clouds (.ply) from video inputs by extracting SIFT features and optimizing cross-frame mappings via Brute-Force matching and Lowe's Ratio Test.</div>
       <div class="tag-row">
@@ -780,7 +806,7 @@
     </div>
 
     <div class="project-card" style="cursor:pointer;" onclick="window.open('https://github.com/Vnshiee/Macroeconomic_Time_Series_Analysis','_blank')">
-      <div class="project-num">P — 03</div>
+      <div class="project-num">P — 04</div>
       <div class="project-name">Macroeconomic Time Series Analysis</div>
       <div class="project-desc">Robust SVAR and VARX frameworks utilizing Granger Causality, FEVD, and Impulse Response Functions to quantify causal shock transmissions, isolate structural breaks, and map endogenous policy responses in multivariate data.</div>
       <div class="tag-row">
@@ -795,7 +821,7 @@
     </div>
 
     <div class="project-card" style="cursor:pointer;" onclick="window.open('https://github.com/Vnshiee/Electricity_Consumption_Forecasting','_blank')">
-      <div class="project-num">P — 04</div>
+      <div class="project-num">P — 05</div>
       <div class="project-name">Electricity Consumption Forecasting</div>
       <div class="project-desc">Comparative time series forecasting pipeline evaluating SARIMA-GARCH, Prophet, and custom PyTorch LSTMs. Achieved an optimized 2.36% MAPE by explicitly modeling residual volatility clustering and non-linear temporal dependencies.</div>
       <div class="tag-row">
@@ -948,12 +974,13 @@
     <div class="contact-row">
       <div class="contact-item">
         <span class="contact-label">Email</span>
-        <a class="contact-val" href="/cdn-cgi/l/email-protection#4335222d302b2a2822247170032a2a302631216d22206d2a2d"><span class="__cf_email__" data-cfemail="f583949b869d9c9e9492c7c6b59c9c86908797db9496db9c9b">[email&#160;protected]</span></a>
+        <a class="contact-val" href="mailto:gupta.van20@gmail.com">gupta.van20@gmail.com</a>
       </div>
-      <div class="contact-item">
-        <span class="contact-label">Alt</span>
-        <a class="contact-val" href="/cdn-cgi/l/email-protection#57302227233679213639656717303a363e3b7934383a"><span class="__cf_email__" data-cfemail="5532202521347b23343b6765153238343c397b363a38">[email&#160;protected]</span></a>
-      </div>
+        <div class="contact-item">
+          <span class="contact-label">Alt</span>
+          <a class="contact-val" href="mailto:vanshikag23@iiserb.ac.in">vanshikag23@iiserb.ac.in</a>
+        </div>
+      
       <div class="contact-item">
         <span class="contact-label">Phone</span>
         <a class="contact-val" href="tel:+919616259407">+91 9616259407</a>
@@ -962,3 +989,50 @@
         <span class="contact-label">GitHub</span>
         <a class="contact-val" href="https://github.com/Vnshiee" target="_blank">github.com/Vnshiee</a>
       </div>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-credit">Handcrafted by Vanshika Gupta</p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.project-grid');
+    const btnPrev = document.getElementById('scroll-prev');
+    const btnNext = document.getElementById('scroll-next');
+    if (!slider) return;
+
+    // Arrow button logic
+    if (btnPrev && btnNext) {
+      btnPrev.addEventListener('click', () => {
+        slider.scrollBy({ left: -400, behavior: 'smooth' }); // Cards are 400px wide
+      });
+
+      btnNext.addEventListener('click', () => {
+        slider.scrollBy({ left: 400, behavior: 'smooth' });
+      });
+
+      // Hover styles dynamically for carousel buttons
+      [btnPrev, btnNext].forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+          btn.style.background = 'var(--ink)';
+          btn.style.color = 'var(--paper)';
+        });
+        btn.addEventListener('mouseleave', () => {
+          btn.style.background = 'transparent';
+          btn.style.color = 'var(--ink)';
+        });
+      });
+    }
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
