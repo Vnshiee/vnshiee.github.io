@@ -607,6 +607,50 @@
       text-transform: uppercase;
     }
 
+    /* ── COURSEWORK BANNER ── */
+    .coursework-banner {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 1.5rem 3rem;
+      border-top: 1px solid var(--rule);
+      background: var(--card-bg);
+      flex-wrap: wrap;
+    }
+
+    .coursework-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .coursework-items {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.85rem;
+      font-size: 0.85rem;
+      color: var(--ink);
+    }
+
+    .coursework-items .separator {
+      color: var(--muted);
+      opacity: 0.5;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    @media (max-width: 768px) {
+      .coursework-banner {
+        padding: 1.5rem;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -658,7 +702,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="29marchResume.pdf" target="_blank">CV</a></li>
+    <li><a href="UpdatedCV.pdf" target="_blank">CV</a></li>
   </ul>
 </nav>
 
@@ -684,6 +728,25 @@
     </div>
   </div>
 </section>
+
+<div class="coursework-banner">
+  <div class="coursework-label">Advanced Coursework</div>
+  <div class="coursework-items">
+    <span>Natural Language Processing (NLP)</span>
+    <span class="separator">/</span>
+    <span>Deep Learning</span>
+    <span class="separator">/</span>
+    <span>Computer Vision</span>
+    <span class="separator">/</span>
+    <span>Artificial Intelligence (AI)</span>
+    <span class="separator">/</span>
+    <span>Machine Learning </span>
+    <span class="separator">/</span>
+    <span>Algorithms</span>
+    <span class="separator">/</span>
+    <span>Applied Optimization</span>
+  </div>
+</div>
 
 <!-- EXPERIENCE -->
 <section id="experience">
@@ -914,7 +977,7 @@
       <div>
         <div class="edu-inst">IIT Madras</div>
         <div class="edu-degree">Diploma in Programming</div>
-        <div class="edu-detail">System Commands, Modern App Dev, PDSA Java, Python</div>
+        <div class="edu-detail">System Commands, Modern App Dev, PDSA, Java, Python</div>
       </div>
     </div>
 
@@ -1044,10 +1107,3 @@
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
